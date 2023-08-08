@@ -108,6 +108,7 @@ function subArticle()
 			</tr>
 			<?php
 			$sql = fnSqlArticleList(1, $sDel, $sArticle, $sRoom, $sKeyPlace, $sArticleNote, $sKeyBox, $sDrawing, $sSellCharge, $sPage, $orderBy, $orderTo);
+			var_dump($sql);
 
 			$res = mysqli_query($conn, $sql);
 			$i = 0;
@@ -316,6 +317,7 @@ function subArticleEditComplete()
 	if ($articleNo) {
 		// 編集
 		$sql = fnSqlArticleUpdate($articleNo, $article, $room, $keyPlace, $address, $articleNote, $keyBox, $drawing, $sellCharge, $del);
+		var_dump($sql);
 		$res = mysqli_query($conn, $sql);
 	} else {
 		// 新規登録
