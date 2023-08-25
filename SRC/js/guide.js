@@ -124,18 +124,17 @@ function fnGuideMove(muki, articleNo) {
 	$("#search tr").filter(":even").find("td").attr("class", "list_td1");
 	$("#regist tr").filter(":odd").find("td").attr("class", "list_td0");
 	$("#regist tr").filter(":even").find("td").attr("class", "list_td1");
+}
 
-
-	/**
-	 * 物件検索の新規登録チェック
-	 */
-	function fnGuideRegistCheck() {
-		var count = $("#regist tr").length;
-		if (count < 2) {
-			alert("物件が選択されていません");
-			return;
-		}
-		form.act.value = 'guideEdit';
-		form.submit();
+/**
+ * 物件検索の新規登録チェック
+ */
+function fnGuideRegistCheck() {
+	var count = $("#regist tr").length;
+	if (count < 2) {
+		alert("物件が選択されていません");
+		return;
 	}
+	form.act.value = 'guideEdit';
+	form.submit();
 }

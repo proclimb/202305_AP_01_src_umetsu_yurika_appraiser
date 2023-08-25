@@ -7,7 +7,6 @@ function fnArticleEditCheck() {
 		alert('物件名を入力してください');
 		return;
 	}
-	if (isLength(100, "物件名", form.article)) { return; }
 
 	if (isLength(100, "物件名", form.article)) { return; }
 	if (isLength(100, "部屋番号", form.room)) { return; }
